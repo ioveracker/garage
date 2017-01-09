@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7A0995309C8155A42AD603588F1970DBA11EF2A9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7A0995309C8155A42AD603588F1970DBA11EF2A9" : 9223372036854775807,
+    "86B47FB838DA1C6D1AB2F13E57B4A56D1718185F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A794A866-7994-46CE-85BF-D597B64BD904",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7A0995309C8155A42AD603588F1970DBA11EF2A9" : "garage\/",
+    "86B47FB838DA1C6D1AB2F13E57B4A56D1718185F" : "WebIOPi\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Garage",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Garage.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ioveracker\/garage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7A0995309C8155A42AD603588F1970DBA11EF2A9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ioveracker\/WebIOPiSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "86B47FB838DA1C6D1AB2F13E57B4A56D1718185F"
+    }
+  ]
+}

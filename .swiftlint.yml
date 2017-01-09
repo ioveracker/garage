@@ -1,0 +1,6 @@
+excluded:
+  - Pods
+variable_name:
+  excluded:
+    - pi
+

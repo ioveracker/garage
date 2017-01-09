@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (5.1.1)
+  - Quick (1.0.0)
+  - WebIOPi (0.1.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - WebIOPi (from `../WebIOPi`)
+
+EXTERNAL SOURCES:
+  WebIOPi:
+    :path: "../WebIOPi"
+
+SPEC CHECKSUMS:
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  WebIOPi: 2da2d2a1fe37e3f81237dc5ec659e13bf7d10a44
+
+PODFILE CHECKSUM: beaf0f9a75b077e265cd91fcf0e4544cd5de2e83
+
+COCOAPODS: 1.1.1
