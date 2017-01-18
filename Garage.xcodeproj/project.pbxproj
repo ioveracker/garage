@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		29E42EC03BB76D4F62E7685A /* Pods_GarageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1ACABF6F72A1C0B60F2598 /* Pods_GarageTests.framework */; };
+		3441D34B6596F663EECB206A /* Pods_GarageWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9474108892FB5875A2931AA0 /* Pods_GarageWatch_Extension.framework */; };
 		786D00A01E231DF9008F3E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D009F1E231DF9008F3E91 /* AppDelegate.swift */; };
 		786D00A21E231DF9008F3E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D00A11E231DF9008F3E91 /* ViewController.swift */; };
 		786D00A51E231DF9008F3E91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786D00A31E231DF9008F3E91 /* Main.storyboard */; };
 		786D00A71E231DF9008F3E91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786D00A61E231DF9008F3E91 /* Assets.xcassets */; };
 		786D00AA1E231DF9008F3E91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786D00A81E231DF9008F3E91 /* LaunchScreen.storyboard */; };
 		786D00B51E231DF9008F3E91 /* GarageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D00B41E231DF9008F3E91 /* GarageTests.swift */; };
+		78DD48581E24675F0068365E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DD48561E24675F0068365E /* Interface.storyboard */; };
+		78DD485A1E24675F0068365E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DD48591E24675F0068365E /* Assets.xcassets */; };
+		78DD48611E24675F0068365E /* GarageWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 78DD48601E24675F0068365E /* GarageWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		78DD48681E24675F0068365E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD48671E24675F0068365E /* InterfaceController.swift */; };
+		78DD486A1E24675F0068365E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD48691E24675F0068365E /* ExtensionDelegate.swift */; };
+		78DD486C1E24675F0068365E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD486B1E24675F0068365E /* NotificationController.swift */; };
+		78DD486E1E24675F0068365E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD486D1E24675F0068365E /* ComplicationController.swift */; };
+		78DD48701E24675F0068365E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DD486F1E24675F0068365E /* Assets.xcassets */; };
+		78DD48741E24675F0068365E /* GarageWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 78DD48541E24675F0068365E /* GarageWatch.app */; };
 		E2B57551AE6561B7417C9A68 /* Pods_Garage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607D3577890E5D1F36A0D90E /* Pods_Garage.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +35,54 @@
 			remoteGlobalIDString = 786D009B1E231DF9008F3E91;
 			remoteInfo = Garage;
 		};
+		78DD48621E24675F0068365E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 786D00941E231DF9008F3E91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78DD485F1E24675F0068365E;
+			remoteInfo = "GarageWatch Extension";
+		};
+		78DD48721E24675F0068365E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 786D00941E231DF9008F3E91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78DD48531E24675F0068365E;
+			remoteInfo = GarageWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78DD487A1E24675F0068365E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				78DD48611E24675F0068365E /* GarageWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78DD487C1E24675F0068365E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				78DD48741E24675F0068365E /* GarageWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F1ACABF6F72A1C0B60F2598 /* Pods_GarageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D11E15FCDEF394CDB195CD4 /* Pods-Garage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Garage/Pods-Garage.release.xcconfig"; sourceTree = "<group>"; };
 		607D3577890E5D1F36A0D90E /* Pods_Garage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AE8DDD9E3FAFFBBFBD1F54 /* Pods_GarageWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67751E94BCED6D45351EFB2D /* Pods-GarageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarageTests/Pods-GarageTests.release.xcconfig"; sourceTree = "<group>"; };
+		72397A3119327C0FD4CC6092 /* Pods-GarageWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarageWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarageWatch Extension/Pods-GarageWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		786D009C1E231DF9008F3E91 /* Garage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786D009F1E231DF9008F3E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		786D00A11E231DF9008F3E91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,11 +93,33 @@
 		786D00B01E231DF9008F3E91 /* GarageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GarageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		786D00B41E231DF9008F3E91 /* GarageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageTests.swift; sourceTree = "<group>"; };
 		786D00B61E231DF9008F3E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D1C5891E2F334E00985650 /* Garage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Garage.entitlements; sourceTree = "<group>"; };
+		78DD48541E24675F0068365E /* GarageWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarageWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78DD48571E24675F0068365E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		78DD48591E24675F0068365E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78DD485B1E24675F0068365E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78DD48601E24675F0068365E /* GarageWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GarageWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78DD48661E24675F0068365E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		78DD48671E24675F0068365E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		78DD48691E24675F0068365E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		78DD486B1E24675F0068365E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		78DD486D1E24675F0068365E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		78DD486F1E24675F0068365E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78DD48711E24675F0068365E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C293EB19C136CA9C47BEFB /* Pods-Garage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Garage/Pods-Garage.debug.xcconfig"; sourceTree = "<group>"; };
 		8CA31B140C0DEC97EE63D66D /* Pods-GarageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarageTests/Pods-GarageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9474108892FB5875A2931AA0 /* Pods_GarageWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarageWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91EBF57916BD01F65D7480F /* Pods-GarageWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarageWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarageWatch Extension/Pods-GarageWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2AAB8BC4262142EB844FBA0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		786D00991E231DF9008F3E91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +136,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		78DD485D1E24675F0068365E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3441D34B6596F663EECB206A /* Pods_GarageWatch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +154,8 @@
 				4D11E15FCDEF394CDB195CD4 /* Pods-Garage.release.xcconfig */,
 				8CA31B140C0DEC97EE63D66D /* Pods-GarageTests.debug.xcconfig */,
 				67751E94BCED6D45351EFB2D /* Pods-GarageTests.release.xcconfig */,
+				72397A3119327C0FD4CC6092 /* Pods-GarageWatch Extension.debug.xcconfig */,
+				F91EBF57916BD01F65D7480F /* Pods-GarageWatch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -82,6 +165,8 @@
 			children = (
 				786D009E1E231DF9008F3E91 /* Garage */,
 				786D00B31E231DF9008F3E91 /* GarageTests */,
+				78DD48551E24675F0068365E /* GarageWatch */,
+				78DD48641E24675F0068365E /* GarageWatch Extension */,
 				786D009D1E231DF9008F3E91 /* Products */,
 				143B510FB70B085D04A78854 /* Pods */,
 				B5D1B0A41AAF89C84C829B4E /* Frameworks */,
@@ -93,6 +178,8 @@
 			children = (
 				786D009C1E231DF9008F3E91 /* Garage.app */,
 				786D00B01E231DF9008F3E91 /* GarageTests.xctest */,
+				78DD48541E24675F0068365E /* GarageWatch.app */,
+				78DD48601E24675F0068365E /* GarageWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +187,7 @@
 		786D009E1E231DF9008F3E91 /* Garage */ = {
 			isa = PBXGroup;
 			children = (
+				78D1C5891E2F334E00985650 /* Garage.entitlements */,
 				786D009F1E231DF9008F3E91 /* AppDelegate.swift */,
 				786D00A11E231DF9008F3E91 /* ViewController.swift */,
 				786D00A31E231DF9008F3E91 /* Main.storyboard */,
@@ -119,11 +207,45 @@
 			path = GarageTests;
 			sourceTree = "<group>";
 		};
+		78DD48551E24675F0068365E /* GarageWatch */ = {
+			isa = PBXGroup;
+			children = (
+				78DD48561E24675F0068365E /* Interface.storyboard */,
+				78DD48591E24675F0068365E /* Assets.xcassets */,
+				78DD485B1E24675F0068365E /* Info.plist */,
+			);
+			path = GarageWatch;
+			sourceTree = "<group>";
+		};
+		78DD48641E24675F0068365E /* GarageWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				78DD48671E24675F0068365E /* InterfaceController.swift */,
+				78DD48691E24675F0068365E /* ExtensionDelegate.swift */,
+				78DD486B1E24675F0068365E /* NotificationController.swift */,
+				78DD486D1E24675F0068365E /* ComplicationController.swift */,
+				78DD486F1E24675F0068365E /* Assets.xcassets */,
+				78DD48711E24675F0068365E /* Info.plist */,
+				78DD48651E24675F0068365E /* Supporting Files */,
+			);
+			path = "GarageWatch Extension";
+			sourceTree = "<group>";
+		};
+		78DD48651E24675F0068365E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78DD48661E24675F0068365E /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B5D1B0A41AAF89C84C829B4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				607D3577890E5D1F36A0D90E /* Pods_Garage.framework */,
 				3F1ACABF6F72A1C0B60F2598 /* Pods_GarageTests.framework */,
+				65AE8DDD9E3FAFFBBFBD1F54 /* Pods_GarageWatch.framework */,
+				9474108892FB5875A2931AA0 /* Pods_GarageWatch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,10 +264,12 @@
 				86681D20AB72E43DB5BA238C /* [CP] Embed Pods Frameworks */,
 				8570AA2FDE450048BA96E7A8 /* [CP] Copy Pods Resources */,
 				786D00BF1E231F54008F3E91 /* Swiftlint */,
+				78DD487C1E24675F0068365E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				78DD48731E24675F0068365E /* PBXTargetDependency */,
 			);
 			name = Garage;
 			productName = Garage;
@@ -173,6 +297,44 @@
 			productReference = 786D00B01E231DF9008F3E91 /* GarageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		78DD48531E24675F0068365E /* GarageWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78DD487B1E24675F0068365E /* Build configuration list for PBXNativeTarget "GarageWatch" */;
+			buildPhases = (
+				78DD48521E24675F0068365E /* Resources */,
+				78DD487A1E24675F0068365E /* Embed App Extensions */,
+				2AAB8BC4262142EB844FBA0C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78DD48631E24675F0068365E /* PBXTargetDependency */,
+			);
+			name = GarageWatch;
+			productName = GarageWatch;
+			productReference = 78DD48541E24675F0068365E /* GarageWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		78DD485F1E24675F0068365E /* GarageWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78DD48791E24675F0068365E /* Build configuration list for PBXNativeTarget "GarageWatch Extension" */;
+			buildPhases = (
+				B837E31D579982EB483B94E2 /* [CP] Check Pods Manifest.lock */,
+				78DD485C1E24675F0068365E /* Sources */,
+				78DD485D1E24675F0068365E /* Frameworks */,
+				78DD485E1E24675F0068365E /* Resources */,
+				49CF761EC5D3403BE3DACFAA /* [CP] Embed Pods Frameworks */,
+				0B1573C8C30450FE728E3BEE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GarageWatch Extension";
+			productName = "GarageWatch Extension";
+			productReference = 78DD48601E24675F0068365E /* GarageWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,12 +349,27 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N4E7457U38;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					786D00AF1E231DF9008F3E91 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N4E7457U38;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 786D009B1E231DF9008F3E91;
+					};
+					78DD48531E24675F0068365E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4E7457U38;
+						ProvisioningStyle = Automatic;
+					};
+					78DD485F1E24675F0068365E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4E7457U38;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -211,6 +388,8 @@
 			targets = (
 				786D009B1E231DF9008F3E91 /* Garage */,
 				786D00AF1E231DF9008F3E91 /* GarageTests */,
+				78DD48531E24675F0068365E /* GarageWatch */,
+				78DD485F1E24675F0068365E /* GarageWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -233,9 +412,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		78DD48521E24675F0068365E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DD485A1E24675F0068365E /* Assets.xcassets in Resources */,
+				78DD48581E24675F0068365E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78DD485E1E24675F0068365E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DD48701E24675F0068365E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B1573C8C30450FE728E3BEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarageWatch Extension/Pods-GarageWatch Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		22FEA3D665ABC92C0E79031F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +460,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49CF761EC5D3403BE3DACFAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GarageWatch Extension/Pods-GarageWatch Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		786D00BF1E231F54008F3E91 /* Swiftlint */ = {
@@ -340,6 +566,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B837E31D579982EB483B94E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,6 +601,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		78DD485C1E24675F0068365E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DD486C1E24675F0068365E /* NotificationController.swift in Sources */,
+				78DD486E1E24675F0068365E /* ComplicationController.swift in Sources */,
+				78DD486A1E24675F0068365E /* ExtensionDelegate.swift in Sources */,
+				78DD48681E24675F0068365E /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -367,6 +619,16 @@
 			isa = PBXTargetDependency;
 			target = 786D009B1E231DF9008F3E91 /* Garage */;
 			targetProxy = 786D00B11E231DF9008F3E91 /* PBXContainerItemProxy */;
+		};
+		78DD48631E24675F0068365E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78DD485F1E24675F0068365E /* GarageWatch Extension */;
+			targetProxy = 78DD48621E24675F0068365E /* PBXContainerItemProxy */;
+		};
+		78DD48731E24675F0068365E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78DD48531E24675F0068365E /* GarageWatch */;
+			targetProxy = 78DD48721E24675F0068365E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,6 +647,14 @@
 				786D00A91E231DF9008F3E91 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		78DD48561E24675F0068365E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78DD48571E24675F0068365E /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -488,6 +758,7 @@
 			baseConfigurationReference = 79C293EB19C136CA9C47BEFB /* Pods-Garage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garage/Garage.entitlements;
 				DEVELOPMENT_TEAM = N4E7457U38;
 				INFOPLIST_FILE = Garage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -502,6 +773,7 @@
 			baseConfigurationReference = 4D11E15FCDEF394CDB195CD4 /* Pods-Garage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garage/Garage.entitlements;
 				DEVELOPMENT_TEAM = N4E7457U38;
 				INFOPLIST_FILE = Garage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -515,7 +787,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CA31B140C0DEC97EE63D66D /* Pods-GarageTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = N4E7457U38;
 				INFOPLIST_FILE = GarageTests/Info.plist;
@@ -531,7 +802,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67751E94BCED6D45351EFB2D /* Pods-GarageTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = N4E7457U38;
 				INFOPLIST_FILE = GarageTests/Info.plist;
@@ -540,6 +810,76 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Garage.app/Garage";
+			};
+			name = Release;
+		};
+		78DD48751E24675F0068365E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4E7457U38;
+				IBSC_MODULE = GarageWatch_Extension;
+				INFOPLIST_FILE = GarageWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.Garage.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		78DD48761E24675F0068365E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4E7457U38;
+				IBSC_MODULE = GarageWatch_Extension;
+				INFOPLIST_FILE = GarageWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.Garage.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		78DD48771E24675F0068365E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72397A3119327C0FD4CC6092 /* Pods-GarageWatch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = N4E7457U38;
+				INFOPLIST_FILE = "GarageWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.Garage.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		78DD48781E24675F0068365E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91EBF57916BD01F65D7480F /* Pods-GarageWatch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = N4E7457U38;
+				INFOPLIST_FILE = "GarageWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.Garage.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
 		};
@@ -569,6 +909,24 @@
 			buildConfigurations = (
 				786D00BD1E231DF9008F3E91 /* Debug */,
 				786D00BE1E231DF9008F3E91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78DD48791E24675F0068365E /* Build configuration list for PBXNativeTarget "GarageWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78DD48771E24675F0068365E /* Debug */,
+				78DD48781E24675F0068365E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78DD487B1E24675F0068365E /* Build configuration list for PBXNativeTarget "GarageWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78DD48751E24675F0068365E /* Debug */,
+				78DD48761E24675F0068365E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
