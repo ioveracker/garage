@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ccj-t4-i5V">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Garage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Garage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Garage" id="BYZ-38-t0r" customClass="GarageViewController" customModule="Garage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,22 +23,142 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzB-cE-CTv">
-                                <rect key="frame" x="170.5" y="318.5" width="34" height="30"/>
-                                <state key="normal" title="Door"/>
+                                <rect key="frame" x="0.0" y="547" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.52156862749999999" green="0.61568627450000002" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dka-mY-TLo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <state key="normal" title="Door">
+                                    <color key="titleColor" red="0.16470588235294117" green="0.25882352941176473" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="doorButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCS-DM-UcJ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oLz-pf-9pB">
+                                <rect key="frame" x="169" y="559" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VzB-cE-CTv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RXD-HX-kom"/>
-                            <constraint firstItem="VzB-cE-CTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e43-gg-DcE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VzB-cE-CTv" secondAttribute="bottom" constant="60" id="Nh2-MX-BXl"/>
+                            <constraint firstItem="VzB-cE-CTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pi8-SL-9DY"/>
+                            <constraint firstAttribute="trailing" secondItem="VzB-cE-CTv" secondAttribute="trailing" id="isT-VQ-lbM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Garage" id="JtM-yE-kkJ">
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="frB-jW-fkg">
+                            <color key="tintColor" red="0.16470588235294117" green="0.25882352941176473" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="E0j-Wb-60B" kind="show" identifier="Settings" id="CO5-ea-bwJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="oLz-pf-9pB" id="F2G-aM-WFE"/>
+                        <outlet property="doorButton" destination="VzB-cE-CTv" id="s44-to-ylw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="212" y="127"/>
+        </scene>
+        <!--Settings Table View Controller-->
+        <scene sceneID="Vfc-lP-nAk">
+            <objects>
+                <tableViewController id="E0j-Wb-60B" customClass="SettingsTableViewController" customModule="Garage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="gBE-nl-ke5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Raspberry Pi URI" id="fRd-lF-SV9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Host" id="XvK-7g-2FE">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XvK-7g-2FE" id="2OD-ae-9cI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Host" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpD-zh-bCT">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MpD-zh-bCT" firstAttribute="top" secondItem="2OD-ae-9cI" secondAttribute="top" id="AMp-A4-SzK"/>
+                                                <constraint firstAttribute="bottom" secondItem="MpD-zh-bCT" secondAttribute="bottom" id="KYO-0V-WZE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MpD-zh-bCT" secondAttribute="trailing" constant="8" id="R0w-j8-Wze"/>
+                                                <constraint firstItem="MpD-zh-bCT" firstAttribute="leading" secondItem="2OD-ae-9cI" secondAttribute="leadingMargin" constant="8" id="aVA-1p-mn6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="GPIO Pin" id="16c-h1-Qtw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Pin" id="H7p-na-kMp">
+                                        <rect key="frame" x="0.0" y="156" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H7p-na-kMp" id="SRx-qb-2AV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="GPIO Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-hZ-A0z">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="NgY-hZ-A0z" secondAttribute="bottom" id="CgH-Mq-UxZ"/>
+                                                <constraint firstItem="NgY-hZ-A0z" firstAttribute="top" secondItem="SRx-qb-2AV" secondAttribute="top" id="G2d-jl-n8n"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NgY-hZ-A0z" secondAttribute="trailing" constant="8" id="ah2-AK-oef"/>
+                                                <constraint firstItem="NgY-hZ-A0z" firstAttribute="leading" secondItem="SRx-qb-2AV" secondAttribute="leadingMargin" constant="8" id="tZS-Ym-R0B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="E0j-Wb-60B" id="2q5-7y-yiW"/>
+                            <outlet property="delegate" destination="E0j-Wb-60B" id="eRP-T5-DNt"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="hostTextField" destination="MpD-zh-bCT" id="38o-ew-zsB"/>
+                        <outlet property="pinTextField" destination="NgY-hZ-A0z" id="nLN-ms-zF6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdw-aB-uk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gbv-dv-DMK">
+            <objects>
+                <navigationController id="ccj-t4-i5V" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rxf-OR-Z64">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lbZ-7P-3DQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bq0-aw-Bmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Settings" width="24" height="24"/>
+    </resources>
 </document>

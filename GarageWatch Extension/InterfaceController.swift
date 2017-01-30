@@ -24,6 +24,13 @@ class InterfaceController: WKInterfaceController {
         pi.GPIO.setFunction(.out, pin: 14) { (status) in
             if status == .ok {
                 pi.GPIO.runSequence([.on, .off, .on], delay: 10, pin: 14, completion: { (status) in
+                    if status != .ok {
+                        self.presentAlert(withTitle: "Uh oh!",
+                                     message: "Something went wrong. Status: \(status)",
+                                     preferredStyle: .alert,
+                                     actions: [
+                                        WKAlertAction(title: "OK", style: .default, handler: {})])
+                    }
                 })
             }
         }
